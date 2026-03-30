@@ -13,14 +13,12 @@ pd.options.mode.chained_assignment = None
 
 load_dotenv()
 
-###############################   INITIALIZE EMBEDDINGS MODEL  #################################################################################################
-
+# Init embedding models
 embeddings = OllamaEmbeddings(
     model=os.getenv("EMBEDDING_MODEL"),
 )
 
-###############################   INITIALIZE CHROMA VECTOR STORE   #############################################################################################
-
+# Init chroma vector store
 vector_store = Chroma(
     collection_name=os.getenv("COLLECTION_NAME"),
     embedding_function=embeddings,

@@ -80,7 +80,6 @@ else:
 
 
     print("")
-
     # If all websites are ready, fetch data and write to files
     if snapshot_ready:
         print("== > All articles are ready - start writing data to datasets directory")
